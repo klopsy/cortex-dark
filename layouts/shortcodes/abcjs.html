@@ -1,0 +1,10 @@
+{{ $sha25 := sha256 .Inner }}
+<hr>
+<div class='composition' id="{{ $sha25 }}">
+  <div id="canvas-{{ $sha25 }}"></div>
+  <div id="midi-{{ $sha25 }}"></div>
+  <button onclick="toggleDiv('hide-{{ $sha25 }}')">Source</button>
+  <div id="hide-{{ $sha25 }}" style="display:none">
+    <textarea id="abc-{{ $sha25 }}" cols="60" rows="15">{{ replace .Inner "    " ""}}</textarea>
+  </div>
+</div>

@@ -1,2 +1,8 @@
 {{ $texjs := resources.Get "js/tex-mml-chtml.js" }}
 <script id="MathJax-script" async src="{{$texjs.Permalink}}"></script>
+
+{{ $abcjs := resources.Get "js/abcjsbasic.js" }}
+<script id="abcjs" async src="{{$abcjs.Permalink}}"></script>
+
+{{ $custom := resources.Get "js/custom.js" }}
+<script id="custom" async src="{{$custom.Permalink}}"></script>
