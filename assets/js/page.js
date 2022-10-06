@@ -14,6 +14,7 @@ function stackNote(href, level) {
   old_pages = pages.slice(0, level - 1);
   state = { pages: old_pages, level: level };
   window.history.pushState(state, "", uri);
+  renderAbcjs();
 }
 
 function unstackNotes(level) {
@@ -190,7 +191,6 @@ window.onload = function () {
       fetchNote(stacks[i], i + 1);
     }
   }
-
   document
     .querySelector(".grid")
     .addEventListener("scroll", debounce(updateCollapsedState), {
