@@ -66,6 +66,10 @@ pre {
   background: var(--grid-bg);
 }
 
+tr:nth-child(even) {
+  background-color: #3f4d5a;
+}
+
 .page {
   background: var(--page-bg);
   white-space: normal;
@@ -76,8 +80,8 @@ pre {
   vertical-align: top;
   box-sizing: border-box;
   position: sticky;
-  min-width: 640px;
-  max-width: 640px;
+  min-width: 840px;
+  max-width: 840px;
   box-shadow: -2px 0 16px var(--shadow-color);
 
   .collapsed-title {
