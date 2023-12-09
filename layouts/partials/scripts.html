@@ -6,3 +6,6 @@
 
 {{ $custom := resources.Get "js/custom.js" }}
 <script id="custom" async src="{{$custom.Permalink}}"></script>
+
+{{ $mermaid := resources.Get "js/mermaid.min.js" }}
+<script id="custom" async src="{{$mermaid.Permalink}}"></script>
